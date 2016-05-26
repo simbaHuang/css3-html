@@ -125,3 +125,10 @@
 		hsla(0, 0%, 100%, .1) 25%,
 		transparent 0, transparent 50%);
 }
+/*网格*/
+.background-linear-grid{
+	background: #58a;
+	background-image: linear-gradient(#fb3 1px, transparent 0),
+					linear-gradient(90deg, #fb3 1px, transparent 0);
+	background-size: 30px 30px;
+}
