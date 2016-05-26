@@ -1,0 +1,127 @@
+/*
+	ERIC
+	2014.9.16
+	公共 css
+*/
+
+/*公共*/
+.body{
+	margin: 20px auto;
+	padding:20px;
+	width: 1230px;
+	box-shadow: 0 0 10px 10px #dcdcdc;
+	background: #FFF;
+	font-size: 16px;
+	color: #fff;
+}
+.title{height: 40px;line-height: 40px;color: deeppink}
+.content{padding: 20px;border: 1px dashed #ccc;}
+
+.box{
+	display: inline-block;
+	margin: 20px;
+	width: 200px;
+	height: 120px;
+	line-height: 120px;
+	text-align: center;
+}
+
+/*透明边框*/
+.transparent-border{
+	background: #ff0066;
+	border: 10px solid hsla(240, 0%, 10%, 0.2);
+	background-clip: padding-box;/*这个属性可以让元素的背景色铺到内边距为止*/
+}
+/*多重边框 box-shadow*/
+.multiple-border-boxShadow{
+	margin: 35px;
+	background: yellowgreen;
+	box-shadow: 0 0 0 10px #655,
+				0 0 0 15px deeppink;
+}
+/*多重边框 outline*/
+.multiple-border-outline{
+	background: yellowgreen;
+	border:10px solid #655;
+	outline: 5px solid deeppink;
+}
+/*多重边框 outline offset内嵌*/
+.multiple-border-outline-offset{
+	background: yellowgreen;
+	border:14px solid #655;
+	outline: 1px solid deeppink;
+	outline-offset:-7px;
+}
+
+
+/*
+ * 需求描述：背景图离右边跟底部各20px
+ * */
+
+/*背景定位 background-position*/
+.background-position{
+	background: url(../images/bg.jpg) no-repeat #58a;
+	background-position: right 20px bottom 20px;
+}
+/*背景定位 background-origin*/
+.background-origin{
+	width: 160px;
+	height: 80px;
+	line-height: 80px;
+	padding: 20px;
+	background: url(../images/bg.jpg) no-repeat right bottom #58a;
+	background-origin: content-box;
+}
+/*背景定位 calc*/
+.background-calc{
+	background: url(../images/bg.jpg) no-repeat #58a;
+	background-position: calc(100% - 20px) calc(100% - 20px);
+}
+
+/*边框内圆角*/
+.border-inside-radius{
+	margin: 30px;
+	outline: 10px solid #655;
+	border-radius: 10px;
+	box-shadow: 0 0 0 4px #655;
+	background-color: yellowgreen;
+}
+
+/*线性渐变背景*/
+.background-linear{
+	background: linear-gradient(#fb3, #58a);
+}
+/*线性渐变背景 ps只有中间的40%部分才会有渐变*/
+.background-linear-scope{
+	background: linear-gradient(#fb3 30%, #58a 70%);
+}
+/*纯色对半背景*/
+.background-linear-fifty{
+	background: linear-gradient(#fb3 50%, #58a 0);
+}
+/*条纹背景*/
+.background-linear-stripe{
+	background: linear-gradient(#fb3 33.3%, #58a 0, #58a 66.6%, yellowgreen 0);
+	background-size: 100% 30%;
+}
+/*垂直条纹*/
+.background-linear-vertical{
+	background: linear-gradient(to right, #fb3 50%, yellowgreen 0);/*to right 可换成 90deg*/
+	background-size: 30% 100%;
+}
+/*倾斜条纹*/
+.background-linear-tilt{
+	background: linear-gradient(45deg, #fb3 25%,#58a 0, #58a 50%,#fb3 0, #fb3 75%, #58a 0);
+}
+/*另一种倾斜条纹*/
+.background-linear-repeating{
+	background: repeating-linear-gradient(45deg, #fb3, #fb3 25%, #58a 0, #58a 50%);
+}
+/*再一种倾斜条纹*/
+.background-linear-repeating-hsla{
+	background: #58a;
+	background-image: repeating-linear-gradient(45deg, 
+		hsla(0, 0%, 100%, .1),
+		hsla(0, 0%, 100%, .1) 25%,
+		transparent 0, transparent 50%);
+}
